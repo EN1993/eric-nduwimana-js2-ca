@@ -32,17 +32,15 @@ async function productsItem() {
     }
 
 
-
-    
-
     articlesContainer.innerHTML += `<div class="article">
     
-                                      <h4>Title: ${item.title}</>
+                                      <h4>Title: ${item.title}</4>
                                       <h5>Author: ${item.author}</h5>
                                       <i class="${cssClass} fa-heart" data-id="${item.id}" data-title="${item.title}" data-author="${item.author}"></i>
     
     </div>`;
 });
+
 
 const favButtons = document.querySelectorAll(".article i");
 
@@ -73,16 +71,14 @@ function handleClick() {
       saveFavs(newFavs);
     }
 
-    
 
  }
 
- 
 
  function saveFavs(favs) {
    localStorage.setItem("favourite", JSON.stringify(favs));
  }
-
+ 
 }
 
 productsItem();
