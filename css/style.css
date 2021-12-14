@@ -1,0 +1,79 @@
+body {
+  background: rgb(209, 201, 201);
+  margin: 0 auto;
+}
+.container {
+  max-width: 1000px;
+  margin: 25px auto;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.article {
+  margin: 10px;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+.error {
+  background: rgb(215, 183, 183);
+  border: 2px solid rgb(104, 24, 24);
+  font-size: 1rem;
+  margin: 2px;
+  padding: 1rem;
+}
+
+.loader {
+  border: 18px solid white;
+  width: 90px;
+  height: 90px;
+  border-top: 18px solid rgb(150, 69, 69);
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  
+ 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.menu {
+  margin: 15px 0;
+}
+
+.menu a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu a.active {
+  color: rgb(0, 155, 64);
+}
+.article i {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.article i.fa {
+  color: darkred;
+}
+
+@media only screen and (min-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
