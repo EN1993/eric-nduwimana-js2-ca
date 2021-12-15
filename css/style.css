@@ -3,6 +3,10 @@ body {
   margin: 0 auto;
   padding: 0px 20px;
 }
+.main-wrap{
+  width: 300px;
+  margin: 0 auto;
+}
 .container {
   max-width: 650px;
   margin: 25px auto;
@@ -13,7 +17,8 @@ body {
 .article {
   margin: 10px;
   padding: 5px;
-  border: 2px solid black;
+  border: 2px solid rgb(4, 95, 42);
+  width: 300px;
 }
 .search {
   height: 30px;
@@ -69,14 +74,14 @@ body {
   color: darkred;
 }
 
-@media only screen and (min-width: 1000px) {
-  .container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-}
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 710px) {
   .container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
+    
+  }
+  .main-wrap{
+    width: 700px;
+    
   }
 }

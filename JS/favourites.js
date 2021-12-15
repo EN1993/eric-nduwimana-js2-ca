@@ -2,12 +2,15 @@ import {getExistingFavs} from"./utils/favFunctions.js";
 
 const favourite = getExistingFavs();
 
+
+
 const  articlesContainer = document.querySelector(".container");
+articlesContainer.innerHTML = "";
 
 if (favourite.length === 0) {
   articlesContainer.innerHTML =" No Favourites Added Yet";
 }
-articlesContainer.innerHTML = "";
+
 
 favourite.forEach((favourites) => {
   articlesContainer.innerHTML += `<div class="article" 
