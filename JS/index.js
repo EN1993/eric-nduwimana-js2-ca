@@ -14,32 +14,35 @@ async function productsItem() {
   const response= await fetch(url);
   const article = await response.json();
   
+  articlesContainer.innerHTML ="";
+    article.forEach(function (item) {
+
+      let cssClass="far";
   
-
-  article.forEach(function (item) {
-
-    let cssClass="far";
-
-    const doesObjectExist = favourite.find(function (fav) {
-      console.log(fav);
-      return parseInt(fav.id) === item.id;
-    });
-
-    console.log(doesObjectExist);
-
-    if (doesObjectExist) {
-      cssClass="fa";
-    }
-
-
-    articlesContainer.innerHTML += `<div class="article">
-    
-                                      <h4>Title: ${item.title}</4>
-                                      <h5>Author: ${item.author}</h5>
-                                      <i class="${cssClass} fa-heart" data-id="${item.id}" data-title="${item.title}" data-author="${item.author}"></i>
-    
-    </div>`;
-});
+      const doesObjectExist = favourite.find(function (fav) {
+        console.log(fav);
+        return parseInt(fav.id) === item.id;
+      });
+  
+      console.log(doesObjectExist);
+  
+      if (doesObjectExist) {
+        cssClass="fa";
+      }
+  
+  
+      articlesContainer.innerHTML += `<div class="article">
+      
+                                        <h4>Title: ${item.title}</4>
+                                        <h5>Author: ${item.author}</h5>
+                                        <i class="${cssClass} fa-heart" data-id="${item.id}" data-title="${item.title}" data-author="${item.author}"></i>
+      
+      </div>`;
+  });
+  
+  
+  
+  
 
 
 const favButtons = document.querySelectorAll(".article i");
@@ -78,6 +81,7 @@ function handleClick() {
  function saveFavs(favs) {
    localStorage.setItem("favourite", JSON.stringify(favs));
  }
+ 
  
 }
 
