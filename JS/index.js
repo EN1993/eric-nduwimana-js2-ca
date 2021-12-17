@@ -45,13 +45,13 @@ async function productsItem() {
   
 
 
-const favButtons = document.querySelectorAll(".article i");
+  const favButtons = document.querySelectorAll(".article i");
 
-favButtons.forEach((button) => {
+  favButtons.forEach((button) => {
     button.addEventListener("click", handleClick);
-});
+  });
 
-function handleClick() {
+  function handleClick() {
     this.classList.toggle("fa");
     this.classList.toggle("far");
 
@@ -75,12 +75,12 @@ function handleClick() {
     }
 
 
- }
+  }
 
 
- function saveFavs(favs) {
-   localStorage.setItem("favourite", JSON.stringify(favs));
- }
+  function saveFavs(favs) {
+    localStorage.setItem("favourite", JSON.stringify(favs));
+  }
  
  
 }
