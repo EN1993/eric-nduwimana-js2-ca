@@ -10,12 +10,12 @@ const url="http://localhost:1337/articles";
 
 
 
-async function productsItem() {
+async function articlesItem() {
   const response= await fetch(url);
-  const article = await response.json();
+  const articles = await response.json();
   
   articlesContainer.innerHTML ="";
-    article.forEach(function (item) {
+    articles.forEach(function (item) {
 
       let cssClass="far";
   
@@ -85,4 +85,4 @@ async function productsItem() {
  
 }
 
-productsItem();
+articlesItem();
