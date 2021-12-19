@@ -2,8 +2,6 @@ import {getExistingFavs} from"./utils/favFunctions.js";
 
 const favourite = getExistingFavs();
 
-
-
 const  articlesContainer = document.querySelector(".container");
 articlesContainer.innerHTML = "";
 

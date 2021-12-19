@@ -2,13 +2,9 @@ import {getExistingFavs} from"./utils/favFunctions.js";
 const articlesContainer = document.querySelector(".container");
 const search = document.querySelector(".search");
 
-
-
 const favourite = getExistingFavs();
 
 const url="http://localhost:1337/articles";
-
-
 
 async function articlesItem() {
   const response= await fetch(url);
@@ -30,7 +26,6 @@ async function articlesItem() {
         cssClass="fa";
       }
   
-  
       articlesContainer.innerHTML += `<div class="article">
       
                                         <h4>Title: ${item.title}</4>
@@ -39,11 +34,6 @@ async function articlesItem() {
       
       </div>`;
   });
-  
-  
-  
-  
-
 
   const favButtons = document.querySelectorAll(".article i");
 
@@ -74,14 +64,11 @@ async function articlesItem() {
       saveFavs(newFavs);
     }
 
-
   }
-
 
   function saveFavs(favs) {
     localStorage.setItem("favourite", JSON.stringify(favs));
   }
- 
  
 }
 
